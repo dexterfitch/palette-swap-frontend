@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>Palette Swap</title>
+  </head>
+
+  <body>
+  <div class="container">
+  <div class="row">
+  <div class="col-12">
+  
+  <header>
+    <h1>Palette Swap</h1>
+  </header>
+
+  <main>
+
+    <div id="pattern-select-box">
+      <label for="patterns-dropdown">Select a Background Pattern:</label><br>
+      <select name="patterns-dropdown" id="patterns-dropdown">
+         <option disabled selected value> -- select one -- </option>
+      </select>
+    </div>
+
+    <div id="pattern-box"></div>
+
+    <div class="row" id="palettes-box">
+      <div class="col-6" id="palette-box">
+        <div class="palette hidden" id="palette">
+          <div id="palette-name"></div>
+          <div class="row">
+            <div class="col-4 palette-sliders" id="palette-color1">
+              <label>Color 1</label>
+              <div class="color-preview" id="color1-color-preview"></div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color1-r">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color1-r-value"></div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color1-g">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color1-g-value"></div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color1-b">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color1-b-value"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 palette-sliders" id="palette-color2">
+              <label>Color 2</label>
+              <div class="color-preview" id="color2-color-preview"></div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color2-r">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color2-r-value"></div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color2-g">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color2-g-value"></div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color2-b">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color2-b-value"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 palette-sliders" id="palette-color3">
+              <label>Color 3</label>
+              <div class="color-preview" id="color3-color-preview"></div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color3-r">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color3-r-value"></div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color3-g">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color3-g-value"></div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-10">
+                  <input type="range" min="0" max="255" value="0" class="slider" id="color3-b">
+                </div>
+                <div class="col-2">
+                  <div class="color-value" id="color3-b-value"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="palette-button-box">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <div id="generate-style-button-box"></div>
+            </li>
+            <li class="list-inline-item">
+              <div id="save-style-button-box"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden" id="palette-css-box">
+          <div id="palette-css-box-text"></div>
+          <div id="palette-css-box-textarea"></div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row" id="palette-selection-box"></div>
+      </div>
+    </div>
+
+  </main>
+  
+  </div>
+  </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="./src/scripts.js"></script>
+  </body>
+</html>
